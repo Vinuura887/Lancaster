@@ -1,0 +1,521 @@
+* {
+    font-family: "Montserrat";
+    margin: 0;
+    padding: 0;
+    font-size: 1vw;
+}
+
+body {
+    background-image: url("Images/BG.png");
+    background-size: cover;
+    background-attachment: fixed;
+    color: #ffffff;
+}
+
+#bg {
+    background-color: #000a1400;
+}
+
+/* ------------------------ Animations ------------------------ */
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(10px);
+    }
+}
+
+/* ------------------------ Header ------------------------ */
+
+header {
+    display: flex;
+    padding: 1% 0.5%;
+    justify-content: center;
+    align-items: center;
+}
+
+#plataform {
+    display: flex;
+    width: 100%;
+    padding-left: 1%;
+}
+
+#plataform > a > i {
+    transition: 0.5s;
+}
+
+#plataform > a > i:hover {
+    scale: 1.1;
+}
+
+.icon {
+    padding: 0% 0.5%;
+    color: #ffffff;
+}
+
+i {
+    font-size: 1.5rem;
+}
+
+/* ------------------------ Main Page ------------------------ */
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+#mainpage {
+    display: flex;
+    justify-content: flex-end;
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+    border-image: linear-gradient(to right, #ffffff00 1%, rgb(255, 255, 255) 1%, rgb(255, 255, 255) 99%, #ffffff00 1%) 100% 1;
+}
+
+#left {
+    width: 46.5%;
+    flex: 1;
+}
+
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slideshow > img {
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+#right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 1.8%;
+    flex: 1;
+}
+
+#social {
+    width: 100%;
+    height: 33.3%;
+    display: flex;
+    padding-top: 20%;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+#social > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#social > div > a {
+    margin: 10%;
+    transition: 0.5s;
+}
+
+#social > div > a:hover {
+    padding-right: 30%;
+}
+
+#social > div > a > i {
+    font-size: 2rem;
+}
+
+#title {
+    display: flex;
+    height: 33.3%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#launch > p {
+    font-size: 1.3rem;
+    font-style: italic;
+    padding-top: 10%;
+}
+
+#launch:hover {
+    animation: shake 0.1s linear;
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
+    transition: 3s;
+}
+
+#logo:hover {
+    scale: 1.1;
+}
+
+#logo > img {
+    width: 80%;
+}
+
+#render {
+    display: flex;
+    align-items: center;
+    padding-top: 2%;
+    width: 100%;
+    height: 33.3%;
+}
+
+.trailer {
+    padding: 2%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 1s;
+}
+
+.trailer:hover {
+    scale: 1.05;
+}
+
+.trailer > a > img {
+    width: 80%;
+    margin: 0% 10%;
+    border: solid 1px white;
+    border-radius: 6px;
+}
+
+.trailertext {
+    text-align: center;
+    padding-bottom: 1%;
+    font-style: italic;
+}
+
+/* ------------------------ System Specs ------------------------ */
+
+#specs {
+    margin: 0% 1% 0% 1%;
+    padding: 2% 0% 0% 0%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#specs > h2 {
+    padding: 2% 0%;
+    font-size: 2.5rem;
+    text-decoration: underline;
+}
+
+#specs > p {
+    padding-bottom: 2%;
+}
+
+#specsinfo > div > h3 {
+    margin: 5% 0%;
+    font-size: 1.8rem;
+}
+
+#specsinfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 3%;
+}
+
+#specsinfo > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#specsinfo > div > h3 {
+    padding: 2%;
+}
+
+.specstable {
+    width: 90%;
+}
+
+table.specstable {
+    border-collapse: collapse;
+    background-color: #1c1a1a;
+}
+
+th, td {
+    border: solid 1px white;
+    padding: 2%;
+}
+
+/* ------------------------ Footer ------------------------ */
+
+footer {
+    background-color: #1c1a1a;
+    display: flex;
+    flex-direction: column;
+    padding: 3% 5% 1% 5%;
+    align-items: center;
+    border-top: 1px solid white;
+}
+
+#footer1 {
+    display: flex;
+    padding-bottom: 3%;
+}
+
+#logofooter > img {
+    width: 90%;
+}
+
+#logofooter {
+    width: 50%;
+}
+
+#datafooter {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+#datatable {
+    padding-right: 10%;
+}
+
+.data1 {
+    border: none;
+    font-weight: normal;
+    font-size: 0.8rem;
+    padding: 1% 2%;
+    width: 40%;
+    text-align: right;
+}
+
+.data2 {
+    border: none;
+    font-weight: normal;
+    font-size: 0.8rem;
+    padding: 1% 0.5%;
+    width: 50%;
+    text-align: left;
+}
+
+#socialbot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#socialbot > a {
+    margin: 10%;
+    transition: 0.5s;
+}
+
+#socialbot > a:hover {
+    padding-right: 30%;
+}
+
+#socialbot > a > i {
+    font-size: 2rem;
+}
+
+#dd:hover {
+    animation: shake 0.1s linear;
+}
+
+/* ------------------------ Media Queries ------------------------ */
+
+@media only screen and (min-width: 2560px) {
+
+}
+
+@media only screen and (max-width: 1440px) {
+
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+}
+
+@media only screen and (max-width: 768px) {
+
+}
+
+@media only screen and (max-width: 425px) {
+    * {
+        font-size: 4vw;
+    }
+
+    header {
+        flex-direction: column;
+        padding: 5% 2%;
+    }
+
+    #plataform {
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    i {
+        font-size: 2rem;
+    }
+
+    #mainpage {
+        flex-direction: column;
+        align-items: center;
+        border-top: solid 1px white;
+        border-bottom: solid 1px white;
+    }
+
+    #left, #right {
+        width: 90%;
+        padding-left: 3.5%;
+    }
+
+    #right {
+        align-items: center;
+    }
+
+    #social {
+        align-items: center;
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+
+    #social > div {
+        flex-direction: row;
+        padding-right: 22%;
+    }
+
+    #social > div > a > i {
+        font-size: 1.5rem;
+    }
+
+    #launch > p {
+        font-size: 1rem;
+        padding-top: 5%;
+    }
+
+    #logo > img {
+        width: 100%;
+    }
+
+    #render {
+        flex-direction: column;
+        padding-top: 5%;
+    }
+
+    .trailer > a > img {
+        width: 90%;
+        margin: 5%;
+    }
+
+    .trailertext {
+        font-size: 1rem;
+        padding-bottom: 1%;
+    }
+
+    #specs > h2 {
+        font-size: 2rem;
+    }
+
+    #specs > p {
+        text-align: center;
+    }
+
+    #specsinfo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #specsinfo > div > h3 {
+        font-size: 1.5rem;
+        margin: 3% 0;
+    }
+
+    .specstable {
+        width: 95%;
+    }
+
+    th, td {
+        padding: 5% 0;
+        text-align: center;
+    }
+
+    footer {
+        padding: 5% 2%;
+    }
+
+    #footer1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #logofooter > img {
+        width: 100%;
+    }
+
+    #datafooter {
+        width: 100%;
+        justify-content: center;
+        padding: 5% 0;
+    }
+
+    table#datatable {
+        padding-right: 0;
+        padding-left: 10%;
+    }
+
+    .data1, .data2 {
+        font-size: 0.7rem;
+        padding: 2% 1%;
+    }
+    
+    #socialbot {
+        flex-direction: row;
+    }
+
+    #socialbot > a {
+        margin: 5%;
+    }
+
+    #socialbot > a > i {
+        font-size: 1.5rem;
+    }
+
+    #dd {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+
+}
+
+@media only screen and (max-width: 320px) {
+
+}
+
